@@ -1,6 +1,7 @@
 **Multi-Tool Chat Bot in Python**  
 
-This code is an implementation of a simple chatbot using Python and various libraries in Python. 
+This code is an implementation of a simple chatbot using Python and various libraries in Python.   
+
 Members:
 1. CSE B 04 - Neha Gupta
 2. CSE B 23 - Unnati Nagpurkar
