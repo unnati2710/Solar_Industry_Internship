@@ -7,8 +7,8 @@ import re
 career_advice_generator = pipeline("text-generation", model="distilgpt2")
 
 # API credentials (Replace with your actual credentials)
-GOOGLE_API_KEY = 'AIzaSyAYzZ6h83a0lwsjeOWQdlE11sAv0NRjqRw'
-SEARCH_ENGINE_ID = 'www.google.com' 
+GOOGLE_API_KEY = 'AIzaSyCUaU3QWKSUUoreDL2u4gxDQ_TCdtmrVKw'
+SEARCH_ENGINE_ID = '015221a71c1474441' 
 
 # Function to perform a real-time Google search using the Google Custom Search API
 def google_search(query):
