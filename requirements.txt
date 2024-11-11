@@ -1,6 +1,6 @@
 streamlit
 transformers
-docx
+--upgrade python-docx
 requests
 PyMuPDF   # for PDF processing, if used
 requests==2.32.3
