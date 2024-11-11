@@ -4,7 +4,7 @@ from transformers import pipeline
 import re
 from io import BytesIO
 import fitz  # PyMuPDF for PDF files
-from docx import Document
+
 import fitz  # PyMuPDF
 import io
 from warnings import PendingDeprecationWarning
@@ -71,18 +71,12 @@ def wikipedia_search(keyword):
         return f"Error occurred: {err}"  # For other errors (network, JSON, etc.)
 
 
-from docx import Document
+
 def analyze_cv(cv_text):
     keywords = re.findall(r'\b\w+\b', cv_text)
     advice_prompt = f"Career insights for a professional skilled in {', '.join(keywords[:5])}: "
     advice = career_advice_generator(advice_prompt, max_length=50, num_return_sequences=1)[0]["generated_text"]
     return advice
-def extract_text_from_docx(uploaded_file):
-    text = ""
-    document = Document(uploaded_file)
-    for paragraph in document.paragraphs:
-        text += paragraph.text + "\n"
-    return text
 
 # Streamlit UI Layout
 def main():
@@ -123,8 +117,6 @@ def main():
                 cv_text = uploaded_file.read().decode("utf-8")
             elif uploaded_file.type == "application/pdf":
                 cv_text = extract_text_from_pdf(uploaded_file)
-            elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-                cv_text = extract_text_from_docx(uploaded_file)
             else:
                 cv_text = None
             
