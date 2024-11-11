@@ -3,4 +3,6 @@ transformers
 docx
 requests
 PyMuPDF   # for PDF processing, if used
-warnings
+requests==2.32.3
+PyMuPDF==1.24.13  # or the desired compatible version
+
