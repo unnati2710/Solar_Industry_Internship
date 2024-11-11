@@ -1,0 +1,5 @@
+pip freeze > requirements.txt
+streamlit
+transformers
+requests
+pymupdf   # for PDF processing, if used
