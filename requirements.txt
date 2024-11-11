@@ -3,4 +3,4 @@ transformers
 docx
 requests
 PyMuPDF   # for PDF processing, if used
-
+warnings
