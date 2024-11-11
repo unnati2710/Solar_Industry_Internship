@@ -3,3 +3,4 @@ transformers
 docx
 requests
 pymupdf   # for PDF processing, if used
+exceptions
