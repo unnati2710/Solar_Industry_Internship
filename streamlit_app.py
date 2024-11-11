@@ -71,23 +71,17 @@ def wikipedia_search(keyword):
 
 
 from docx import Document
-
+def analyze_cv(cv_text):
+    keywords = re.findall(r'\b\w+\b', cv_text)
+    advice_prompt = f"Career insights for a professional skilled in {', '.join(keywords[:5])}: "
+    advice = career_advice_generator(advice_prompt, max_length=50, num_return_sequences=1)[0]["generated_text"]
+    return advice
 def extract_text_from_docx(uploaded_file):
     text = ""
     document = Document(uploaded_file)
     for paragraph in document.paragraphs:
         text += paragraph.text + "\n"
     return text
-
-
-
-# Function to analyze CV and give job insights
-def analyze_cv(cv_text):
-    # Extract keywords based on simple regex (you could enhance this with NLP)
-    keywords = re.findall(r'\b\w+\b', cv_text)
-    advice_prompt = f"Career insights for a professional skilled in {', '.join(keywords[:5])}: "
-    advice = career_advice_generator(advice_prompt, max_length=50, num_return_sequences=1)[0]["generated_text"]
-    return advice
 
 # Streamlit UI Layout
 def main():
@@ -133,15 +127,9 @@ def main():
             else:
                 cv_text = None
             
-        if cv_text:
-            advice = analyze_cv(cv_text)
-            st.write(advice)
-        if uploaded_file.type == "application/pdf":
-            cv_text = extract_text_from_pdf(uploaded_file)
-        elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-            cv_text = extract_text_from_docx(uploaded_file)
-
-
+            if cv_text:
+                advice = analyze_cv(cv_text)
+                st.write(advice)
 
     elif choice == "Chatopedia":
         st.header("📚 Chatopedia (Wikipedia Search)")
