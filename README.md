@@ -7,7 +7,7 @@ Made by the Team members:
 2. Unnati Nagpurkar B-23
 3. Vaibhavi Dewarkar B-24
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://solarindustryinternship-xhjrxueiy6hmubd8dzwqhc.streamlit.app/)
+[![CLICK HERE TO USE THE CHATBOT DIRECTLY](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://solarindustryinternship-xhjrxueiy6hmubd8dzwqhc.streamlit.app/)
 
 ### How to run it on your own machine
 
