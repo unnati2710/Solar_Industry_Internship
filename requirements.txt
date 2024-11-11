@@ -1,5 +1,6 @@
-pip freeze > requirements.txt
 streamlit
 transformers
+io
+fitz
 requests
 pymupdf   # for PDF processing, if used
