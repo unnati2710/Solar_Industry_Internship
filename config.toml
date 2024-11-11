@@ -1,0 +1,9 @@
+[server]
+headless = true
+port = $PORT  # Useful for Heroku or cloud deployments that require dynamic ports
+
+[theme]
+primaryColor = "#4CAF50"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
