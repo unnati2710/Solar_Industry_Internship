@@ -7,6 +7,7 @@ import fitz  # PyMuPDF for PDF files
 from docx import Document
 import fitz  # PyMuPDF
 import io
+from warnings import PendingDeprecationWarning
 
 # Initialize Text Generator for Career Insights
 career_advice_generator = pipeline("text-generation", model="distilgpt2")
