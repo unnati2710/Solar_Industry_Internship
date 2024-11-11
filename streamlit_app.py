@@ -4,10 +4,8 @@ from transformers import pipeline
 import re
 from io import BytesIO
 import fitz  # PyMuPDF for PDF files
-
 import fitz  # PyMuPDF
 import io
-from warnings import PendingDeprecationWarning
 
 # Initialize Text Generator for Career Insights
 career_advice_generator = pipeline("text-generation", model="distilgpt2")
